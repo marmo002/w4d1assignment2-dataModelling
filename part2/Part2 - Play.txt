@@ -1,0 +1,23 @@
+     DIRECTOR
+    +---------------+
+    |               |
++----+id: integer   |
+|   | name: string  |
+|   |               |
+|   |               |
+|   +---------------+
+|
+|
+|
+|
+|
+|    PLAY                            ACTOR                          ROLE
+|   +----------------------+        +----------------------+       +--------------+
+|   |                      |        |                      |       |              |
+|   | id: integer+--------------+   | id: integer          |   +----+id: integer  |
+|   | name: string         |    |   | name: string         |   |   | name: string |
++---->director_id: integer |    +---->play_id: integer     |   |   |              |
+    |                      |        | role_id: integer<--------+   |              |
+    |                      |        |                      |       +--------------+
+    +----------------------+        |                      |
+                                    +----------------------+
