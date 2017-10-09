@@ -1,0 +1,11 @@
+CUSTOMER                              ORDER
++-------------------------+           +---------------------------+
+|                         |           |                           |
+|id: integer              |     +---> |id: integer                |
+|Name: strin              |     |     |order_number: integer      |
+|mailing address: string  |     |     |date: date()               |
+|email: string            |     |     |                           |
+|order_id: integer   +----------+     |                           |
+|                         |           |                           |
+|                         |           |                           |
++-------------------------+           +---------------------------+

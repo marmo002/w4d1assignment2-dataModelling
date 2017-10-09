@@ -1,0 +1,40 @@
+ AUTHOR
+
++---------------+
+|               |
+| id: integer  +---+
+| name: string  |  |
+|               |  |
+|               |  |
++---------------+  |
+                   |
+                   |
+                   |
+                   |      BOOK                          HOLD                            PATRON(user)
+                   |
+                   |     +--------------------+        +--------------------+          +----------------------+
+                   |     |                    |        |                    |          |                      |
+                   |     | id: integer +----------+    | id: integer        |     +-----+id: integer          |
+                   |     | title: string      |   |    | date_placed: date  |     |    | name: stringg        |
+                   |     | isbn: integer      |   +----->book_id: integer   |     |    | card_number: integer |
+                   +------>author_id: integer |   |    | patron_id: integer<------+    | email: string        |
+                         |                    |   |    |                    |     |    |                      |
+                         +--------------------+   |    |                    |     |    |                      |
+                                                  |    |                    |     |    |                      |
+                                                  |    +--------------------+     |    +----------------------+
+                                                  |                               |
+                                                  |                               |
+                                                  |                               |
+                                                  |                               |
+                                                  |                               |
+                                                  |     LOAN                      |
+                                                  |                               |
+                                                  |    +--------------------+     |
+                                                  |    |                    |     |
+                                                  |    | id: integer        |     |
+                                                  |    | due_date: integer  |     |
+                                                  |    | renewed?: boolean  |     |
+                                                  +----->book_id: integer   |     |
+                                                       | patron_id: integer<------+
+                                                       |                    |
+                                                       +--------------------+
